@@ -18,9 +18,18 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "baseUrl": "src"
   },
   "include": [
     "src"
-  ]
+  ],
+  "jest": {
+    "setupFiles": [
+			"<rootDir>/src/core/setupTests.ts"
+		],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
+  }
 }
